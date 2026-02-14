@@ -3,7 +3,7 @@
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  // Mobile menu
+  // Mobile menu toggle
   const burger = document.querySelector(".burger");
   const mobile = document.getElementById("mobileMenu");
   if (burger && mobile) {
@@ -21,7 +21,7 @@
     });
   }
 
-  // Split selector: hover on desktop, tap-to-expand on touch
+  // Split selector: hover desktop, tap expand mobile
   const split = document.querySelector(".split");
   if (!split) return;
 
@@ -37,47 +37,43 @@
     localStorage.setItem(KEY, pane.dataset.pane);
   };
 
-  // Tap behavior
   panes.forEach(pane => {
-    const primary = pane.querySelector(".btn--primary");
+    const primaryLink = pane.querySelector(".btn--primary") || pane.querySelector("a");
 
-    // Click on pane (not on buttons) in touch: first tap expands, second tap enters
     pane.addEventListener("click", (e) => {
-      if (!isTouch()) return;
-
       // If user clicked a link/button inside, allow normal behavior
       const clickedLink = e.target.closest("a");
       if (clickedLink) return;
 
-      // First tap: expand
+      // Desktop: do nothing (hover handles; user uses buttons)
+      if (!isTouch()) return;
+
+      // Touch: first tap expands, second tap enters
       if (!pane.classList.contains("is-active")) {
         e.preventDefault();
         setActive(pane);
         return;
       }
 
-      // Second tap: go to primary link
-      if (primary && primary.href) {
-        localStorage.setItem(KEY, pane.dataset.pane);
-        window.location.href = primary.href;
+      if (primaryLink && primaryLink.href) {
+        window.location.href = primaryLink.href;
       }
     });
 
-    // Keyboard accessibility
     pane.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         if (isTouch()) {
           if (!pane.classList.contains("is-active")) setActive(pane);
-          else if (primary && primary.href) window.location.href = primary.href;
+          else if (primaryLink && primaryLink.href) window.location.href = primaryLink.href;
         } else {
-          if (primary && primary.href) window.location.href = primary.href;
+          if (primaryLink && primaryLink.href) window.location.href = primaryLink.href;
         }
       }
     });
   });
 
-  // Reset choice button
+  // Reset choice
   const reset = document.getElementById("resetChoice");
   if (reset) {
     reset.addEventListener("click", () => {
@@ -88,7 +84,7 @@
     });
   }
 
-  // Optional: auto-select last mode in mobile (expand)
+  // Auto expand last selection on mobile
   const saved = localStorage.getItem(KEY);
   if (saved && isTouch()) {
     const pane = split.querySelector(`.pane[data-pane="${saved}"]`);
