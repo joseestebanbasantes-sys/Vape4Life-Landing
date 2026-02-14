@@ -3,30 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vape4Life — Mayorista y Minorista</title>
-  <meta name="description" content="Vape4Life: compra mayorista o minorista. Catálogo, atención por WhatsApp, envíos y tienda física." />
+  <title>Vape4Life — Tienda de Vapeo en Ecuador</title>
+  <meta name="description" content="Vape4Life: tienda minorista y portal mayorista. Compra segura, atención por WhatsApp, envíos y tienda física." />
 
+  <!-- Social preview (opcional) -->
+  <meta property="og:title" content="Vape4Life — Tienda de Vapeo" />
+  <meta property="og:description" content="Compra minorista o entra a mayorista. Atención por WhatsApp, envíos y tienda física." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og.webp" />
+
+  <link rel="icon" href="assets/img/favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
-  <!-- Top bar -->
+  <!-- Topbar -->
   <header class="topbar">
     <div class="wrap topbar__inner">
-      <a class="brand" href="./">
-        <span class="brand__mark">V4L</span>
+      <a class="brand" href="./" aria-label="Vape4Life Home">
+        <img class="brand__logo" src="assets/img/logo.png" alt="Vape4Life" />
         <span class="brand__name">Vape4Life</span>
       </a>
 
-      <nav class="nav">
-        <a href="#sobre">Sobre</a>
-        <a href="#ventajas">Ventajas</a>
-        <a href="#selector">Mayorista / Minorista</a>
+      <nav class="nav" aria-label="Navegación">
+        <a href="#tienda">Tienda en línea</a>
+        <a href="#productos">Productos</a>
+        <a href="#historia">Historia</a>
+        <a href="#confianza">Confianza</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
       <div class="topbar__cta">
-        <a class="btn btn--ghost" id="wa-top" href="https://wa.me/593XXXXXXXXX?text=Hola%20Vape4Life%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">
+        <a class="btn btn--primary" href="https://tienda.vape4life.shop/" target="_blank" rel="noopener">
+          Comprar Minorista →
+        </a>
+        <a class="btn btn--ghost" href="https://wa.me/593XXXXXXXXX?text=Hola%20Vape4Life%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">
           WhatsApp
         </a>
       </div>
@@ -36,209 +47,226 @@
       </button>
     </div>
 
+    <!-- Mobile menu -->
     <div class="mobile" id="mobileMenu" hidden>
       <div class="wrap mobile__inner">
-        <a href="#sobre" class="mobile__link">Sobre</a>
-        <a href="#ventajas" class="mobile__link">Ventajas</a>
-        <a href="#selector" class="mobile__link">Mayorista / Minorista</a>
+        <a href="#tienda" class="mobile__link">Tienda en línea</a>
+        <a href="#productos" class="mobile__link">Productos</a>
+        <a href="#historia" class="mobile__link">Historia</a>
+        <a href="#confianza" class="mobile__link">Confianza</a>
         <a href="#contacto" class="mobile__link">Contacto</a>
-        <a class="btn btn--primary mobile__btn" href="#selector">Elegir tipo de compra</a>
+
+        <a class="btn btn--primary mobile__btn" href="https://tienda.vape4life.shop/" target="_blank" rel="noopener">
+          Comprar Minorista →
+        </a>
+        <a class="btn btn--ghost mobile__btn" href="https://mayorista.vape4life.shop/" target="_blank" rel="noopener">
+          Entrar a Mayorista →
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
   <main>
+    <!-- HERO (retail-first) -->
     <section class="hero">
       <div class="wrap hero__grid">
         <div class="hero__copy">
-          <div class="pill">Mayorista • Minorista • Ecuador</div>
-          <h1>Tu tienda de vapeo con una experiencia clara: <span class="invert">negocio</span> o <span class="invert">personal</span>.</h1>
+          <div class="pill">Tienda • Ecuador • Envíos</div>
+          <h1>
+            Vapeo premium, compra simple.
+            <span class="hero__subhead">Tu tienda minorista con atención real.</span>
+          </h1>
           <p>
-            Catálogo completo, atención directa y procesos simples. Entra como <b>Mayorista</b> si compras para reventa,
-            o como <b>Minorista</b> si compras para ti.
+            Entra a la tienda minorista para comprar por unidad, promos y novedades.
+            Si compras para reventa, también tenemos portal mayorista.
           </p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#selector">Elegir Mayorista / Minorista</a>
-            <a class="btn btn--ghost" href="#contacto">Ver ubicación y contacto</a>
+            <a class="btn btn--primary" href="https://tienda.vape4life.shop/" target="_blank" rel="noopener">
+              Ir a Tienda Minorista →
+            </a>
+            <a class="btn btn--ghost" href="#tienda">
+              Ver “Tienda en línea”
+            </a>
           </div>
 
-          <div class="hero__stats">
-            <div class="stat">
-              <div class="stat__k">Envíos</div>
-              <div class="stat__v">a nivel nacional</div>
-            </div>
-            <div class="stat">
-              <div class="stat__k">Atención</div>
-              <div class="stat__v">WhatsApp directo</div>
-            </div>
-            <div class="stat">
-              <div class="stat__k">Stock</div>
-              <div class="stat__v">rotación real</div>
-            </div>
+          <div class="hero__trust">
+            <div class="chip">Atención por WhatsApp</div>
+            <div class="chip">Entrega local / Envíos</div>
+            <div class="chip">Stock real</div>
           </div>
         </div>
 
         <div class="hero__media">
-          <!-- Cambia esta imagen -->
-          <img src="assets/img/hero.webp" alt="Vape4Life" loading="lazy" />
+          <!-- Cambia la imagen: assets/img/hero.webp -->
+          <img src="assets/img/hero.webp" alt="Vape4Life tienda" loading="lazy" />
           <div class="hero__badge">
-            <span class="dot"></span> Disponible ahora
+            <span class="dot"></span> Online ahora
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="section">
+    <!-- TIENDA EN LINEA (aquí vive el selector) -->
+    <section id="tienda" class="section section--soft">
       <div class="wrap">
         <div class="section__head">
-          <h2>Sobre Vape4Life</h2>
+          <h2>Tienda en línea</h2>
           <p>
-            Enfocados en ofrecer productos y atención con procesos claros. Sin vueltas: eliges tu tipo de compra y listo.
+            Elige tu modo de compra. <b>Minorista</b> (para ti) o <b>Mayorista</b> (para reventa).
           </p>
         </div>
 
-        <div class="grid3">
-          <article class="card">
-            <h3>Experiencia rápida</h3>
-            <p>Compra sin fricción: selección clara, pasos directos, atención real.</p>
-          </article>
-          <article class="card">
-            <h3>Mayorista de verdad</h3>
-            <p>Condiciones para negocio: volumen, precios y comunicación enfocada a B2B.</p>
-          </article>
-          <article class="card">
-            <h3>Retail sencillo</h3>
-            <p>Minorista con promos, compras por unidad, y soporte por WhatsApp.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ventajas -->
-    <section id="ventajas" class="section section--alt">
-      <div class="wrap">
-        <div class="section__head">
-          <h2>Lo que te damos</h2>
-          <p>Una operación seria: claridad, velocidad y soporte.</p>
-        </div>
-
-        <div class="grid2">
-          <article class="panel">
-            <h3>Atención y soporte</h3>
-            <ul class="list">
-              <li>WhatsApp directo</li>
-              <li>Respuesta rápida</li>
-              <li>Seguimiento en pedidos</li>
-            </ul>
-          </article>
-
-          <article class="panel">
-            <h3>Logística</h3>
-            <ul class="list">
-              <li>Entrega local</li>
-              <li>Envíos nacionales</li>
-              <li>Empaque seguro</li>
-            </ul>
-          </article>
-
-          <article class="panel">
-            <h3>Mayorista</h3>
-            <ul class="list">
-              <li>Precios por volumen</li>
-              <li>Catálogo enfocado a reventa</li>
-              <li>Asesoría para compra</li>
-            </ul>
-          </article>
-
-          <article class="panel">
-            <h3>Minorista</h3>
-            <ul class="list">
-              <li>Compra por unidad</li>
-              <li>Promos y combos</li>
-              <li>Novedades frecuentes</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selector Split -->
-    <section id="selector" class="section">
-      <div class="wrap">
-        <div class="section__head">
-          <h2>Elige tu tipo de compra</h2>
-          <p>Pasa el mouse (o toca) para ver la info. Luego entra al flujo correcto.</p>
-        </div>
-      </div>
-
-      <div class="wrap">
-        <section class="split" aria-label="Selector Mayorista o Minorista">
-          <!-- MAYORISTA -->
-          <article class="pane pane--mayorista" data-pane="mayorista" role="button" tabindex="0" aria-label="Mayorista">
+        <!-- Selector premium -->
+        <section class="split" aria-label="Selector Minorista o Mayorista">
+          <!-- MINORISTA (principal) -->
+          <article class="pane pane--minorista is-primary" data-pane="minorista" role="button" tabindex="0" aria-label="Minorista">
             <div class="pane__shade"></div>
             <div class="pane__content">
-              <span class="pane__tag">B2B</span>
-              <h3>Mayorista</h3>
-              <p>
-                Precios por volumen, condiciones para negocio y atención enfocada a reventa.
-              </p>
+              <span class="pane__tag">Retail</span>
+              <h3>Minorista</h3>
+              <p>Compra por unidad, promos y novedades. Perfecto si compras para ti.</p>
 
               <div class="pane__meta">
-                <span>• Catálogo completo</span>
-                <span>• Volumen</span>
-                <span>• Soporte directo</span>
+                <span>Compra rápida</span>
+                <span>Promos</span>
+                <span>Entrega / envío</span>
               </div>
 
               <div class="pane__actions">
-                <a class="btn btn--primary" id="go-mayorista" href="https://mayorista.vape4life.shop/">
-                  IR A MAYORISTA →
+                <a class="btn btn--primary" href="https://tienda.vape4life.shop/" target="_blank" rel="noopener">
+                  IR A MINORISTA →
                 </a>
-                <a class="btn btn--ghost" id="wa-mayorista" href="https://wa.me/593XXXXXXXXX?text=Hola%20quiero%20info%20de%20MAYORISTA%20Vape4Life" target="_blank" rel="noopener">
+                <a class="btn btn--ghost" href="https://wa.me/593XXXXXXXXX?text=Hola%20quiero%20info%20de%20MINORISTA%20Vape4Life" target="_blank" rel="noopener">
                   MÁS INFORMACIÓN
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- MINORISTA -->
-          <article class="pane pane--minorista" data-pane="minorista" role="button" tabindex="0" aria-label="Minorista">
+          <!-- MAYORISTA (secundario) -->
+          <article class="pane pane--mayorista" data-pane="mayorista" role="button" tabindex="0" aria-label="Mayorista">
             <div class="pane__shade"></div>
             <div class="pane__content">
-              <span class="pane__tag">Retail</span>
-              <h3>Minorista</h3>
-              <p>
-                Compra por unidad, promos retail y entrega rápida.
-              </p>
+              <span class="pane__tag">B2B</span>
+              <h3>Mayorista</h3>
+              <p>Precios por volumen y condiciones para negocio. Ideal para reventa.</p>
 
               <div class="pane__meta">
-                <span>• Compra rápida</span>
-                <span>• Promos</span>
-                <span>• Entrega / envío</span>
+                <span>Volumen</span>
+                <span>Catálogo</span>
+                <span>Soporte</span>
               </div>
 
               <div class="pane__actions">
-                <a class="btn btn--primary" id="go-minorista" href="https://tienda.vape4life.shop/">
-                  IR A MINORISTA →
+                <a class="btn btn--ghost" href="https://mayorista.vape4life.shop/" target="_blank" rel="noopener">
+                  IR A MAYORISTA →
                 </a>
-                <a class="btn btn--ghost" id="wa-minorista" href="https://wa.me/593XXXXXXXXX?text=Hola%20quiero%20info%20de%20MINORISTA%20Vape4Life" target="_blank" rel="noopener">
+                <a class="btn btn--ghost" href="https://wa.me/593XXXXXXXXX?text=Hola%20quiero%20info%20de%20MAYORISTA%20Vape4Life" target="_blank" rel="noopener">
                   MÁS INFORMACIÓN
                 </a>
               </div>
             </div>
           </article>
         </section>
-      </div>
 
-      <div class="wrap note">
-        <p><b>Tip:</b> en móvil toca una vez para expandir, toca de nuevo para entrar.</p>
+        <p class="note"><b>Tip:</b> en móvil toca una vez para expandir, toca de nuevo para entrar.</p>
       </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="section section--alt">
+    <!-- PRODUCTOS (retail) -->
+    <section id="productos" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Productos</h2>
+          <p>Lo más buscado. (Edita estos nombres según tu catálogo real.)</p>
+        </div>
+
+        <div class="grid4">
+          <article class="card">
+            <h3>Pods</h3>
+            <p>Equipos compactos y prácticos para diario.</p>
+          </article>
+          <article class="card">
+            <h3>Desechables</h3>
+            <p>Opciones listas para usar con gran variedad.</p>
+          </article>
+          <article class="card">
+            <h3>Líquidos</h3>
+            <p>Sales y freebase, sabores top y rotación.</p>
+          </article>
+          <article class="card">
+            <h3>Coils &amp; Pods</h3>
+            <p>Repuestos originales y compatibilidad clara.</p>
+          </article>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn btn--primary" href="https://tienda.vape4life.shop/" target="_blank" rel="noopener">
+            Ver tienda minorista →
+          </a>
+          <a class="btn btn--ghost" href="https://wa.me/593XXXXXXXXX?text=Hola%20quiero%20recomendaci%C3%B3n%20para%20mi%20compra" target="_blank" rel="noopener">
+            Ayuda para elegir (WhatsApp)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section id="historia" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Nuestra historia</h2>
+          <p>Una historia corta, real, que suena a marca (no a plantilla).</p>
+        </div>
+
+        <div class="grid2">
+          <article class="panel">
+            <h3>De cliente a tienda</h3>
+            <p>
+              Empezamos con un objetivo simple: que comprar sea fácil, con atención real y productos que se recomiendan solos.
+              Hoy operamos retail y mayorista con procesos claros.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>Enfoque: claridad y soporte</h3>
+            <p>
+              Preferimos lo simple: precios claros, stock real y respuesta rápida. Si compras para ti, minorista.
+              Si compras para negocio, mayorista.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIANZA -->
+    <section id="confianza" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>Confianza</h2>
+          <p>Lo que la gente realmente quiere saber antes de comprar.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>Atención rápida</h3>
+            <p>WhatsApp directo, sin robots.</p>
+          </article>
+          <article class="card">
+            <h3>Envíos</h3>
+            <p>Entrega local y envíos nacionales.</p>
+          </article>
+          <article class="card">
+            <h3>Experiencia clara</h3>
+            <p>Minorista vs Mayorista, sin confusión.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section--soft">
       <div class="wrap">
         <div class="section__head">
           <h2>Contacto</h2>
@@ -248,7 +276,7 @@
         <div class="grid2">
           <article class="panel">
             <h3>WhatsApp</h3>
-            <p>Te respondemos directo.</p>
+            <p>Escríbenos y te asesoramos.</p>
             <a class="btn btn--primary" href="https://wa.me/593XXXXXXXXX?text=Hola%20Vape4Life%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">
               Abrir WhatsApp →
             </a>
@@ -271,15 +299,17 @@
     <footer class="footer">
       <div class="wrap footer__inner">
         <div class="footer__left">
-          <div class="brand brand--footer">
-            <span class="brand__mark">V4L</span>
-            <span class="brand__name">Vape4Life</span>
+          <div class="footer__brand">
+            <img class="footer__logo" src="assets/img/logo.png" alt="Vape4Life" />
+            <div>
+              <div class="footer__name">Vape4Life</div>
+              <div class="muted">© <span id="year"></span> — Todos los derechos reservados.</div>
+            </div>
           </div>
-          <div class="muted">© <span id="year"></span> Vape4Life. Todos los derechos reservados.</div>
         </div>
 
         <div class="footer__right">
-          <a href="#selector">Mayorista / Minorista</a>
+          <a href="#tienda">Tienda en línea</a>
           <a href="#contacto">Contacto</a>
           <button class="linklike" id="resetChoice" type="button">Cambiar elección</button>
         </div>
