@@ -396,8 +396,8 @@ a{ color:inherit; }
 }
 
 /* IMÁGENES */
-.pane--minorista::before{ background-image:url("../img/local.webp"); }
-.pane--mayorista::before{ background-image:url("../img/bodega.webp"); }
+.pane--minorista::before{ background-image:url("../img/local.jpg"); }
+.pane--mayorista::before{ background-image:url("../img/bodega.jpg"); }
 
 /* overlay claro premium */
 .pane__shade{
